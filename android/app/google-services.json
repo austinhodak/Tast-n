@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "96872751170",
+    "firebase_url": "https://tast-n.firebaseio.com",
+    "project_id": "tast-n",
+    "storage_bucket": "tast-n.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:96872751170:android:c218ed1575d6352d6e0ddb",
+        "android_client_info": {
+          "package_name": "com.austinhodak.tastn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "96872751170-0mk2r72fqlsnqp2q26ls78fshf437sb8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJ4wL1Jkykav7jMzaXnx5AWaKjVwkkDF0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "96872751170-0mk2r72fqlsnqp2q26ls78fshf437sb8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
