@@ -8,7 +8,7 @@ const authHeader =
 
 class YelpAPI {
   static Future getRestaurantList() {
-    var url = baseUrl + "/businesses/search?location=16509?categories=restaurants";
+    var url = baseUrl + "/businesses/search?location=16509&categories=restaurants&limit=50";
     return http
         .get(url, headers: {HttpHeaders.authorizationHeader: authHeader});
   }

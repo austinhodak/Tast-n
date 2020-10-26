@@ -41,7 +41,7 @@ class RestaurantCard extends StatelessWidget {
                 Row(
                   children: [
                     Text(
-                      "\$\$ • Barbeque, Sandwiches, Smokehouse",
+                      "${restaurant.price} • ${restaurant.getCategories()}",
                       style: TextStyle(shadows: [Shadow(color: Colors.black38, offset: Offset(0, 0), blurRadius: 3)], color: Colors.white, fontSize: 14.0, fontWeight: FontWeight.bold),
                     )
                   ],
@@ -49,7 +49,7 @@ class RestaurantCard extends StatelessWidget {
                 Row(
                   children: [
                     Text(
-                      "Open 11:00 AM - 2:00 AM",
+                      restaurant.getOpenStatus(false),
                       style: TextStyle(shadows: [Shadow(color: Colors.black38, offset: Offset(0, 0), blurRadius: 3)], color: Colors.white, fontSize: 14.0, fontWeight: FontWeight.bold),
                     )
                   ],
@@ -110,6 +110,16 @@ class RestaurantCard extends StatelessWidget {
                               image: AssetImage('assets/yelp/ratings/${restaurant.getRatingImage()}'),
                               width: 100,
                             ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 6.0),
+                              child: Text(
+                                  restaurant.reviewCount.toString(),
+                                style: TextStyle (
+                                  color: Colors.grey,
+                                  fontFamily: 'RobotoCondensed'
+                                ),
+                              ),
+                            )
                           ],
                         ),
                       )),

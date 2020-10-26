@@ -33,6 +33,10 @@ class TCardController {
     _state._reset();
   }
 
+  garbage() {
+    _state._runReverseOrderAnimation();
+  }
+
   void dispose() {
     _state = null;
   }

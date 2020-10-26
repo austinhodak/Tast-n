@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:tastn/models/restauarant.dart';
 import 'dart:math' as math;
 import 'package:tcard/src/swip_info.dart';
 import '../cards.dart';
@@ -7,10 +8,11 @@ import '../cards.dart';
 class BottomButtons extends StatelessWidget {
   const BottomButtons({
     Key key,
-    TCardController controller,
-  }) : _controller = controller, super(key: key);
+    @required TCardController controller, List<Restaurant> list,
+  }) : _controller = controller, list = list, super(key: key);
 
   final TCardController _controller;
+  final List<Restaurant> list;
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +38,7 @@ class BottomButtons extends StatelessWidget {
         ),
         FloatingActionButton(
           onPressed: () {
-           // _controller.forward(direction: SwipDirection.Left);
+            _controller.forward(direction: SwipDirection.Left);
           },
           tooltip: 'Nope',
           child: Image(
@@ -45,19 +47,21 @@ class BottomButtons extends StatelessWidget {
           ),
           backgroundColor: Colors.white,
         ), // This
-        /*FloatingActionButton(
-          onPressed: () {},
-          tooltip: 'Super Like',
+        FloatingActionButton(
+          onPressed: () {
+            print(list[_controller.index].id);
+          },
+          tooltip: 'Never Again',
           child: Image(
-            image: AssetImage('assets/icons/icons8-lightning-bolt-96.png'),
+            image: AssetImage('assets/icons/icons8-trash-144.png'),
             width: 24,
           ),
           mini: true,
           backgroundColor: Colors.white,
-        ), // This*/
+        ), // This
         FloatingActionButton(
           onPressed: () {
-            //_controller.forward();
+            _controller.forward();
           },
           tooltip: 'Like',
           child: Image(
